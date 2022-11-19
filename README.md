@@ -4,7 +4,7 @@
 
 ### Summary
 
-1. Throughout this Activity, I learned more things about TryParse than I did previously. Not only does TryParse output the number into the desired variable, but it also returns a boolean. This makes it very useful in error handling with textboxes and numbers.
+1. Throughout this Activity, I learned more things about TryParse than I knew previously. Not only does TryParse output the number into the desired variable, but it also returns a boolean. This makes it very useful in error handling with textboxes and numbers.
 
 2. Although it was not too much of a challenge to fix, I kept having the issue of my error messages staying up after the problem was fixed. I realized that I needed to reset them. Another thing was that the BMI from the previous run would stay up if an error was made. I wanted the BMI to clear on an error and the error to clear upon fixing it.
 
