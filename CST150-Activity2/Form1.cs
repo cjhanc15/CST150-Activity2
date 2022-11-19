@@ -17,18 +17,37 @@ namespace CST150_Activity2
             InitializeComponent();
         }
 
-        private void BMICalculator_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            double height = double.Parse(userHeight.Text);
-            double weight = double.Parse(userWeight.Text);
-            height *= height;
-            double bmi = weight / height;
-            bmiLabel.Text = "Your BMI is: " + bmi;
+            //initialize height and weight, check if valid using TryParse
+            double height;
+            double weight;
+
+            Boolean validHeight = double.TryParse(userHeight.Text, out height) && height > 0;
+            Boolean validWeight = double.TryParse(userWeight.Text, out weight) && weight > 0;
+
+            //if height and weight valid, bmi is calculated, error messages stay blank and unshown (prevents error from staying up after fixing errors)
+            if(validHeight && validWeight)
+            {
+                double bmi = weight / (height *= height);
+                bmi = Math.Round(bmi, 3);
+                heightErrorMessage.Text = " ";
+                weightErrorMessage.Text = " ";
+                calculatedBMI.Text = bmi.ToString();
+            }
+            //invalid height, height error message and BMI is not calculated
+            if(!validHeight)
+            {
+                heightErrorMessage.Text = "ERROR: Please enter a valid height in meters";
+                calculatedBMI.Text = " ";
+            }
+            //invalid height, weight error message and BMI is not calculated
+
+            if (!validWeight)
+            {
+                weightErrorMessage.Text = "ERROR: Please enter a valid weight in kilograms";
+                calculatedBMI.Text = " ";
+            }
         }
     }
 }
