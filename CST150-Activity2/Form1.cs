@@ -40,6 +40,7 @@ namespace CST150_Activity2
             {
                 heightErrorMessage.Text = "ERROR: Please enter a valid height in meters";
                 calculatedBMI.Text = " ";
+                if (validWeight) weightErrorMessage.Text = " ";
             }
             //invalid height, weight error message and BMI is not calculated
 
@@ -47,6 +48,7 @@ namespace CST150_Activity2
             {
                 weightErrorMessage.Text = "ERROR: Please enter a valid weight in kilograms";
                 calculatedBMI.Text = " ";
+                if (validHeight) weightErrorMessage.Text = " ";
             }
         }
     }
