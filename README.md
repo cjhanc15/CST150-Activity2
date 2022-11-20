@@ -19,7 +19,7 @@
 <img width="754" alt="Screenshot 2022-11-19 at 11 10 33 AM" src="https://user-images.githubusercontent.com/102087890/202865452-fe9ba5b2-3adc-4478-ba25-2e830ffe4391.png">
 
 ### ERROR Handling:
-In order for the BMI to be calculated, one must enter a number greater than 0 for the height and weight. If there is a string, empty textbox, or a number less than 1, there will be an error message. Once the error is fixed, the message will go away on calculate. 
+In order for the BMI to be calculated, one must enter a number greater than 0 for the height and weight. This is determined by the booleans on lines 26 and 27 of form1.cs. If there is a string, empty textbox, or a number less than 1, there will be an error message. Once the error is fixed, the message will go away on calculate. 
 
 #### Invalid Height/Weight:
 
